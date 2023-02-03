@@ -1,0 +1,103 @@
+
+<div class="container">
+  <h1 style="text-align:center;">{{ section.settings.Heading_text }}</h1>
+            <div class="{% if section.settings.layout == 'left' %} box1{% endif %}{% if section.settings.layout =='right' %} box2{% endif %}">
+                <img class="img" src="{{section.settings.image_with_text_image | img_url:''}}"/>
+            </div>
+            <div class="section-img">
+                <h1>{{ section.settings.text }}</h1>
+                <p>{{ section.settings.paragraph }}</p>
+                <a href="{{ section.settings.button_link }}">Buy Now</a>
+            </div>
+    </div>
+{% schema %}
+  {
+    "name": "Custom-image-with-text",
+    "settings": [
+      {
+      "type": "image_picker",
+      "id": "image_with_text_image",
+      "label": "Image"
+      },
+      {
+      "type": "select",
+      "id": "layout",
+      "label": "Vertical alignment",
+      "options": [
+        {
+      "value": "left",
+      "label": "Left"
+      },
+      {
+      "value": "right",
+      "label": "Right"
+      }
+      ]
+      },
+      {
+      "type": "text",
+      "id": "text",
+      "label": "Heading"
+      },
+      {
+      "type": "richtext",
+      "id": "paragraph",
+      "label": "Paragraph"
+      },
+      {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button"
+      },
+       {
+      "type": "text",
+      "id": "Heading_text",
+      "label": "Heading"
+      }
+      
+    ],
+    "presets": [
+        {
+        "name": "Custom-image-with-text",
+        "category": "Text-with-image"
+        }
+  ] 
+  }
+{% endschema %}
+
+{% stylesheet %}
+ .container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+  .box1{
+    float:left;
+  }
+  .box2{
+    float:right;
+  }
+.img {
+    height: 250px;
+}
+/*   ======================responsive======================== */
+  @media(max-width:768px){
+                  .box2 {
+                  width: 100%;
+                  display:flex;
+                  }
+                  .section-img {
+                  width: 50%;
+                  text-align: justify;
+                  }
+  }
+  @media(max-width:425px){
+    .section-img {
+                    width: 100%;
+                    text-align: justify
+                    }
+  }
+  
+{% endstylesheet %}
+

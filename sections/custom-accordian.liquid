@@ -1,0 +1,89 @@
+<div class="accordian-container">
+      <h1 style="text-align:center;">{{ section.settings.Heading }}</h1>
+      {% for block in section.blocks %}
+              <div class="accordian_box">
+                <button class="hide_show_bttn">{{ block.settings.question }}</button>
+                <p class="accordian_answer">{{ block.settings.answer }}</p>
+              </div>
+      {% endfor %}
+</div> 
+{% schema %}
+  {
+    "name": "Custom-Accordian",
+    "settings": [
+                {
+                "type": "text",
+                "id": "Heading",
+                "label": "Question & Answer"
+                }
+    ],
+      "blocks": [
+        {
+            "name": "Custom-Accordian ",
+            "type": "colomn",
+            "settings": [
+                        {
+                        "type":"text",
+                        "id":"question",
+                        "label":"Question"
+                        },
+                        {
+                        "type": "text",
+                        "id": "answer",
+                        "label": "Answer"
+                        }
+                        ]
+        }
+    ],
+        "presets": [
+    {
+      "name": "Custom-Accordian",
+      "category": "Custom-Accordian"
+    }
+  ] 
+  }
+{% endschema %}
+
+{% style %}
+  .accordian-container{
+    width:100%;
+    max-width:1200px;
+    margin:0 auto;
+  }
+.accordian_answer{
+  display:none;
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  background-color: lightblue;
+  margin-top: 10px;
+}  
+
+.accordian_box{
+  justify-content:center;
+}
+.hide_show_bttn {
+    border: none;
+    background: none;
+    padding-top:16px;
+    font-size:20px;
+}  
+{% endstyle  %}  
+
+<script>
+  // show And hide
+$(".hide_show_bttn").click(function(){
+    var x =  $(this).parents('.accordian_box').find(".accordian_answer");
+    $(".accordian_answer").not(x).slideUp();
+    $(this).parents('.accordian_box').find(".accordian_answer").toggle('show');
+});
+
+  // only show code
+// $(document).ready(function(){
+//   $(".hide_show_bttn").click(function(){
+//     $(".accordian_answer").hide();
+//     $(this).parents('.accordian_box').find(".accordian_answer").toggle(800);
+//   });
+
+// });
+</script>

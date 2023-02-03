@@ -1,0 +1,99 @@
+<div class="container">
+  <h1 style="text-align:center">{{ section.settings.swap_text }}</h1>
+  <div class="swap_with_zooming">
+      <div class="cardswap">
+          <img src="{{ section.settings.Swap_img1 | img_url:""}}" alt="Card Back">
+          <img src="{{ section.settings.Swap_img2 | img_url:""}}" class="img-top" alt="Card Front">
+      </div>
+      <div class="zooming_img">
+          <img src="{{ section.settings.zooming_effect | img_url:""}}" alt="Card Back">
+      </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Custom-Image-Swap",
+    "settings": [
+      {
+        "type":"text",
+        "id":"swap_text",
+        "label":"Image_Swap"
+      },
+      {
+       "type": "image_picker",
+       "id": "Swap_img1",
+       "label": "Select Image"
+      },
+      {
+       "type": "image_picker",
+       "id": "Swap_img2",
+       "label": "Select Image"
+      },
+      {
+       "type": "image_picker",
+       "id": "zooming_effect",
+       "label": "Select Image"
+      }
+    ],
+    "presets":[
+      {
+        "name":"Custom-Image-Swap",
+        "category":"Custom-Image-Swap"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+  .swap_with_zooming{
+    display:flex;
+    justify-content:space-between;
+  }
+      .cardswap {
+        width: 200px;
+/*         height: 190px; */
+        position: relative;
+        display: inline-block;
+    }
+    .cardswap .img-top {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 99;
+    }
+    .cardswap:hover .img-top {
+        display: inline;
+    }
+
+/* ================================zooming img======================== */
+  .zooming_img{
+            width: 400px;
+            height: 350px;
+            overflow: hidden;
+/*             margin: 0 auto; */
+  }
+  .zooming_img img {
+            width: 100%;
+            transition: 0.5s all ease-in-out;
+        }
+     
+        .zooming_img:hover img {
+            transform: scale(1.5);
+        }
+/*   =======================mediaquerry===================== */
+    @media (max-width:768px){
+        .swap_with_zooming {
+                     flex-wrap: wrap;
+                  }
+        .cardswap {
+                 width: 100%;
+                 }
+        .zooming_img {
+                 width: 100%;    
+                  }
+  }
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

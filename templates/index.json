@@ -1,0 +1,343 @@
+{
+  "sections": {
+    "7bd5525b-b6d5-4bae-8687-11565b538203": {
+      "type": "custom-announcementbar",
+      "blocks": {
+        "57c0cf0f-722d-4b0e-9b55-ac1c54287fb8": {
+          "type": "text_block",
+          "settings": {
+            "announcementtext": "Ansari Collection",
+            "text-allignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "57c0cf0f-722d-4b0e-9b55-ac1c54287fb8"
+      ],
+      "settings": {
+        "show_announcement": true
+      }
+    },
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Ansari-Collection",
+            "heading_size": "h0"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop all",
+            "button_link_1": "shopify:\/\/collections\/all",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": true
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/bnner.png",
+        "image_overlay_opacity": 30,
+        "image_height": "large",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "bottom-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "rich_text": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Talk about your brand<\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured products",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": true,
+        "description_style": "body",
+        "collection": "frontpage",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 28,
+        "padding_bottom": 36
+      }
+    },
+    "collage": {
+      "type": "collage",
+      "settings": {
+        "heading": "Multimedia collage",
+        "heading_size": "h2",
+        "desktop_layout": "left",
+        "mobile_layout": "collage",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn": {
+      "type": "multicolumn",
+      "blocks": {
+        "column1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/jeans2.1.webp",
+            "title": "Men",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "Bottom Wear",
+            "link": "shopify:\/\/collections\/men-bottom-wear"
+          }
+        },
+        "column2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/kurti1.webp",
+            "title": "Kurti",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "Top Wear",
+            "link": "shopify:\/\/collections\/women-top-wear"
+          }
+        },
+        "column3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/shirt3.webp",
+            "title": "Men",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "Top Wear",
+            "link": "shopify:\/\/collections\/men-top-wear-collection"
+          }
+        }
+      },
+      "block_order": [
+        "column1",
+        "column2",
+        "column3"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "c53deb89-a05f-425b-b12a-4445b279d57a": {
+      "type": "custom-image-with-text",
+      "settings": {
+        "image_with_text_image": "shopify:\/\/shop_images\/bodybuilder.jpg",
+        "layout": "left",
+        "text": "Body Bulider",
+        "paragraph": "<p><strong>Bodybuilding<\/strong>is the use of <a href=\"https:\/\/en.wikipedia.org\/wiki\/Resistance_training\" title=\"Resistance training\">progressive resistance exercise <\/a>to control and develop one's <a href=\"https:\/\/en.wikipedia.org\/wiki\/Skeletal_muscle\" title=\"Skeletal muscle\">muscles <\/a>(muscle building) by <a href=\"https:\/\/en.wikipedia.org\/wiki\/Muscle_hypertrophy\" title=\"Muscle hypertrophy\">muscle hypertrophy <\/a>for aesthetic purposes.<a href=\"https:\/\/en.wikipedia.org\/wiki\/Bodybuilding#cite_note-:0-1\">[1] <\/a>It is distinct from similar activities such as <a href=\"https:\/\/en.wikipedia.org\/wiki\/Powerlifting\" title=\"Powerlifting\">powerlifting <\/a>because it focuses on physical appearance instead of strength.<a href=\"https:\/\/en.wikipedia.org\/wiki\/Bodybuilding#cite_note-2\">[2] <\/a>An individual who engages in this activity is referred to as a <strong>bodybuilder<\/strong>.<\/p>",
+        "button_link": "shopify:\/\/collections\/all",
+        "Heading_text": "Image With Text"
+      }
+    },
+    "d643dfcd-a64a-4a8e-87b0-a1e1a415c949": {
+      "type": "custm-banner-slider",
+      "settings": {
+        "heading": "Banner With Text",
+        "image": "shopify:\/\/shop_images\/bnner.png",
+        "para": "Aakib Ansari",
+        "vertical_alignment": "middle"
+      }
+    },
+    "68a6c432-1039-4fa8-a409-986477ab60a2": {
+      "type": "custm-block-bner-slider",
+      "blocks": {
+        "0497cb0a-7b66-4775-8609-2af364deb965": {
+          "type": "colomn",
+          "settings": {
+            "block-slider": "shopify:\/\/shop_images\/New_Project_1.jpg",
+            "text": "Aakib Ansari",
+            "vertical_alignment": "middle"
+          }
+        },
+        "d914350f-0330-483e-a0d3-356c229df301": {
+          "type": "colomn",
+          "settings": {
+            "block-slider": "shopify:\/\/shop_images\/New_Project.jpg",
+            "text": "Aakib Ansari",
+            "vertical_alignment": "middle"
+          }
+        },
+        "77a7421b-56ad-4141-b921-f0abab6b8821": {
+          "type": "colomn",
+          "settings": {
+            "block-slider": "shopify:\/\/shop_images\/bnner.png",
+            "text": "Aakib Ansari",
+            "vertical_alignment": "middle"
+          }
+        }
+      },
+      "block_order": [
+        "0497cb0a-7b66-4775-8609-2af364deb965",
+        "d914350f-0330-483e-a0d3-356c229df301",
+        "77a7421b-56ad-4141-b921-f0abab6b8821"
+      ],
+      "settings": {
+        "Block-banner-slide": "Block Banner Slider With Text"
+      }
+    },
+    "c3fff514-fbd4-43d4-9512-c81d11dcf695": {
+      "type": "custom-image-swatches",
+      "settings": {
+        "swatchhead": "Image  Swatching",
+        "image1": "shopify:\/\/shop_images\/bodybuilder.jpg",
+        "image2": "shopify:\/\/shop_images\/car_mechanic.jpg"
+      }
+    },
+    "d823d612-5ba3-4ae6-8332-65d4aff5a73f": {
+      "type": "custom-accordian",
+      "blocks": {
+        "7bc126f4-125d-493d-bdb3-4fed9689d993": {
+          "type": "colomn",
+          "settings": {
+            "question": "1.What is Your NAme?",
+            "answer": "My self Aakib Ansari"
+          }
+        },
+        "eef8bc6e-23d2-4c28-b112-fa5ef89324a1": {
+          "type": "colomn",
+          "settings": {
+            "question": "2.What is Your College Name?",
+            "answer": "Kalka"
+          }
+        }
+      },
+      "block_order": [
+        "7bc126f4-125d-493d-bdb3-4fed9689d993",
+        "eef8bc6e-23d2-4c28-b112-fa5ef89324a1"
+      ],
+      "settings": {
+        "Heading": "Accordian"
+      }
+    },
+    "a2352d81-e89e-4443-96f8-3d2774815c08": {
+      "type": "custom-image-Swap",
+      "settings": {
+        "swap_text": "Image Swap & Zooming Effect",
+        "Swap_img1": "shopify:\/\/shop_images\/Audi_q5.webp",
+        "Swap_img2": "shopify:\/\/shop_images\/Audi1.jpg",
+        "zooming_effect": "shopify:\/\/shop_images\/car_mechanic.jpg"
+      }
+    },
+    "280b380d-b04c-44a8-86a7-32f6db57675c": {
+      "type": "custom-video-banner-slider",
+      "blocks": {
+        "9d3b766d-cd1c-4c3e-8e80-eb3ef922c1cf": {
+          "type": "colomn2",
+          "settings": {
+            "autoplay": false,
+            "video_link": "https:\/\/www.youtube.com\/watch?v=b94PsRBw0EM"
+          }
+        },
+        "52986078-0d63-4cff-b3ef-19b659843f23": {
+          "type": "colomn",
+          "settings": {
+            "block-slider": "shopify:\/\/shop_images\/bnner.png"
+          }
+        },
+        "a534b574-143a-4495-9dd3-9141a929b9af": {
+          "type": "colomn",
+          "settings": {
+            "block-slider": "shopify:\/\/shop_images\/New_Project.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "9d3b766d-cd1c-4c3e-8e80-eb3ef922c1cf",
+        "52986078-0d63-4cff-b3ef-19b659843f23",
+        "a534b574-143a-4495-9dd3-9141a929b9af"
+      ],
+      "settings": {
+        "banner-slide": "Video With Banner Slider"
+      }
+    }
+  },
+  "order": [
+    "7bd5525b-b6d5-4bae-8687-11565b538203",
+    "image_banner",
+    "rich_text",
+    "featured_collection",
+    "collage",
+    "multicolumn",
+    "c53deb89-a05f-425b-b12a-4445b279d57a",
+    "d643dfcd-a64a-4a8e-87b0-a1e1a415c949",
+    "68a6c432-1039-4fa8-a409-986477ab60a2",
+    "c3fff514-fbd4-43d4-9512-c81d11dcf695",
+    "d823d612-5ba3-4ae6-8332-65d4aff5a73f",
+    "a2352d81-e89e-4443-96f8-3d2774815c08",
+    "280b380d-b04c-44a8-86a7-32f6db57675c"
+  ]
+}

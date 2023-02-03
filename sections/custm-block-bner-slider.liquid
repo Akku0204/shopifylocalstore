@@ -1,0 +1,138 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<h1 style="text-align:center;">{{ section.settings.Block-banner-slide}}</h1> 
+<div class="maincontainer blockbnnr">
+  
+  {% for block in section.blocks %} 
+    <div class="slidercontent">
+       <img class="bannerimg" src="{{block.settings.block-slider | img_url:""}}"/>
+        <div class="text alignment_{{ block.settings.vertical_alignment}}">
+           <p class="des">{{ block.settings.text }}</p>
+    </div>
+    </div>
+  {% endfor %}
+</div>
+{% schema %}
+  {
+    "name": "Custom-Banner-Slider",
+    "settings": [
+               {
+                "type": "text",
+                "id": "Block-banner-slide",
+                "label": "Block-banner"
+                }
+    ],
+    "blocks":[
+      {
+        "name":"Add Image",
+        "type":"colomn",
+        "settings":[
+                  {
+                    "type": "image_picker",
+                    "id": "block-slider",
+                    "label": "Create Your Images"
+                  },
+                  {
+                  "type": "text",
+                  "id": "text",
+                  "label": "Heading"
+                  },
+                  {
+                  "type": "select",
+                  "id": "vertical_alignment",
+                  "label": "Vertical alignment",
+                  "options": [
+                  {
+                  "value": "left",
+                  "label": "Left"
+                  },
+                  {
+                  "value": "middle",
+                  "label": "Middle"
+                  },
+                  {
+                  "value": "right",
+                  "label": "Right"
+                  }
+                  ]
+                  }
+          
+                   ]
+      }
+    ],"presets": [
+            {
+                "name": "Custom-Banner-Slider",
+                "category": "Slider"
+            }
+        ]
+  }
+{% endschema %}
+<style>
+
+  /*=======================bannerslider===========================  */
+  html.js{
+     overflow-x: hidden;
+  }
+.blockbnnr{
+    text-align:center;
+    width:100%;
+}
+  .slidercontent img{
+    width: 100%;
+}
+  main#MainContent .slick-prev{
+  left: 10px;
+  }
+  main#MainContent .slick-prev,main#MainContent .slick-next{
+  z-index: 0999;
+  font-size:30px;
+  bottom:0%;
+  top: 60%;
+  }
+  main#MainContent .slick-next{
+    right:10px;
+  }
+  .des{
+    font-size: 40px;
+    border: 2px solid black;
+    padding: 26px;
+    border-radius: 10px;
+    background: aliceblue;
+  } 
+  .slidercontent{
+  width:100%;
+  position:relative;
+  }
+  .text{
+  position:absolute;
+  }
+  .alignment_middle{
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  }
+  .alignment_left{
+  top:50%;
+  left:20px
+  }
+  .alignment_right{
+  top:50%;
+  right:20px;
+  }
+  
+/*=======================Endbannerslider===========================  */
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+ <script>
+ $(".maincontainer").slick({
+	     autoplay: false,
+	     infinite: true,
+	     dots: true,
+	     slidesToShow: 1,
+	     slideswToScroll: 1,
+	     arrows: true
+	});
+</script>

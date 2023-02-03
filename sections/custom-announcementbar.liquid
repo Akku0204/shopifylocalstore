@@ -1,0 +1,70 @@
+{% if section.settings.show_announcement %}
+    <div class="announcement-bar">
+        {%- for block in section.blocks -%}
+            <div class="content">
+            <marquee direction="{{ block.settings.text-allignment }}" ><p class="para">{{ block.settings.announcementtext }}</p></marquee>
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}
+{% schema %}
+  {
+    "name": "Custom Announcement Bar",
+    "settings": [
+                {
+                "type": "checkbox",
+                "id": "show_announcement",
+                "label": "Show announcement",
+                "default": true
+                }
+    ],"blocks":[
+      {
+        "type":"text_block",
+        "name":"Accordion",
+        "settings":[
+                  {
+                  "type": "text",
+                  "id": "announcementtext",
+                  "label": "Heading",
+                    "default": "Announcement Bar"
+                  },
+                {
+                  "type": "select",
+                  "id": "text-allignment",
+                  "label": "Vertical alignment",
+                  "options": [
+                  {
+                    "value": "right",
+                    "label": "Right"
+                  },
+                  {
+                    "value": "left",
+                    "label": "Left"
+                  }
+                  ],
+                  "default": "left"
+                  }
+                        ]
+                      }
+                    ],
+                    "presets": [
+                    {
+                    "name": "Custom Announcmenet Bar",
+                    "category": "announcement"
+                    }
+                    ] 
+
+  }
+{% endschema %}
+
+<style>
+.announcement-bar{
+  display:flex;
+  justify-content:space-between;
+  background-color:yellow-green;
+}
+  .content{
+    width:100%;
+
+  }
+</style>

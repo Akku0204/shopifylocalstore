@@ -1,0 +1,17 @@
+.cart_icon_text {
+    display: flex;
+    align-items: center;
+    padding: 15px 15px;
+}
+.cart__top_icon {
+    padding-right: 10px;
+}
+.shipping__charge {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  padding-left:15px;
+}
+.footer__cart {
+    padding: 5px 15px;
+}

@@ -1,0 +1,89 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<h1 style="text-align:center;">{{ section.settings.banner-slide}}</h1> 
+  <div class="maincontainer2">
+    {% for block in section.blocks %}
+      {% if block.type == 'colomn' %}
+           <img width="100%" src="{{block.settings.block-slider| img_url:""}}"/>
+      {% elsif block.type == 'colomn2' %}
+        <video width="100%" {% if block.settings.autoplay %}autoplay{% endif %}>
+               <source src="https://cdn.shopify.com/videos/c/o/v/675893711a3d4fd88d7a1153fb491241.mp4" type="video/mp4">
+       </video>
+<!--        <iframe  src="//www.youtube.com/embed/{{ block.settings.video_link.id }}" width="100% !important" frameborder="0" allowfullscreen{% if block.settings.autoplay %}autoplay{% endif %}></iframe> -->
+      {% endif %}
+    {% endfor %}
+  </div>
+{% schema %}
+   {
+    "name": "Custom-Video-Slider",
+    "settings": [
+               {
+                "type": "text",
+                "id": "banner-slide",
+                "label": "Block-banner"
+                }
+    ],
+    "blocks":[
+      {
+        "name":"Add Image",
+        "type":"colomn",
+        "settings":[
+                  {
+                    "type": "image_picker",
+                    "id": "block-slider",
+                    "label": "Create Your Images"
+                  }
+                  ]
+      },
+      {
+        "name":"Add Video",
+        "type":"colomn2",
+        "settings":[
+                {
+                "type": "checkbox",
+                "id": "autoplay",
+                "label": "AutoPlay",
+                "default": true
+                },
+                  {
+                  "type": "video_url",
+                  "id": "video_link",
+                  "label": "Product description video",
+                  "accept": [
+                  "youtube",
+                  "vimeo"
+                  ]
+                  }
+                  ]
+      }
+    ],"presets": [
+            {
+                "name": "Custom-Video-Slider",
+                "category": "Slider"
+            }
+        ]
+   }
+{% endschema %}
+
+{% stylesheet %}
+.slick-initialized .slick-slide {
+    display: block;
+    height: 700px;
+}
+{% endstylesheet %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+ <script>
+   $(document).ready(function(){   
+    $(".maincontainer2").slick({
+       autoplay: true,
+       infinite: true,
+       dots: true,
+       slidesToShow: 1,
+       slideswToScroll: 3,
+       arrows: true
+    });
+});
+</script>

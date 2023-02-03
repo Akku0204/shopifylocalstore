@@ -1,0 +1,73 @@
+<div class="container">
+  <h1 style="text-align:center;">{{ section.settings.swatchhead }}</h1>
+  <div class="image-swatch">
+       <img class="swatchimg1" src="{{section.settings.image1 | img_url:""}}"/>
+       <img class="swatchimg2" src="{{section.settings.image2 | img_url:""}}"/>
+  </div>
+          <input type="button" value="click here" class="bttn">
+  </div>
+{% schema %}
+  {
+    "name": "Custom-Image_swatches",
+    "settings": [
+      {
+        "type":"text",
+        "id":"swatchhead",
+        "label":"SwatchHeading"
+      },
+      {
+      "type": "image_picker",
+      "id": "image1",
+      "label": "Image"
+      },
+      {
+      "type": "image_picker",
+      "id": "image2",
+      "label": "Image"
+      }
+    ],
+    "presets": [
+        {
+        "name": "Custom-Image_swatches",
+        "category": "Swtching image"
+        }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+  .container{
+    width:100%;
+    max-width:1200px;
+    margin:0 auto;
+  }
+  .image-swatch{
+    display:flex;
+    justify-content:space-between;
+  }
+  .swatchimg1, .swatchimg2{
+    width:48%;
+  }
+  .bttn {
+    width: 100px;
+    padding: 6px 0;
+    margin: 20px 10px;
+    border: 1px transparent;
+    background: lightcoral;
+    border-radius: 8px;
+    text-align: center;
+    text-transform: capitalize;
+     }
+{% endstylesheet %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+  $(".bttn").click(function()
+                   {
+                     var src1=$('.image-swatch .swatchimg1').attr('src');
+                     var src2=$('.image-swatch .swatchimg2').attr('src');
+                     $('.image-swatch .swatchimg1').attr('src',src2);
+                     $('.image-swatch .swatchimg2').attr('src',src1);
+                     // alert("hello");
+                   }
+                  );
+</script>
